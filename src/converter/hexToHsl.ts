@@ -27,11 +27,10 @@ const hexToHsl = (color: string) => {
         hsl.h = (r - g) / delta + 4;
         break;
     }
-    hsl.h = (hsl.h / 6) * 360;
-    hsl.s = hsl.s * 100;
-    hsl.l = hsl.l * 100;
   }
-
+  hsl.h = Math.round((hsl.h / 6) * 360);
+  hsl.s = Math.round(hsl.s * 100);
+  hsl.l = Math.round(hsl.l * 100);
   return hsl;
 };
 

@@ -16,6 +16,10 @@ const hexToCmyk = (hex: string) => {
   Object.keys(cmyk).forEach((k) => {
     const key = k as keyof typeof cmyk;
     cmyk[key] *= 100;
+<<<<<<< Updated upstream
+=======
+    cmyk[key] = Math.round(cmyk[key]);
+>>>>>>> Stashed changes
   });
   return cmyk;
 };

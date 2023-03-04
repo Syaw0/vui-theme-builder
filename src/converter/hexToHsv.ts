@@ -27,10 +27,10 @@ const hexToHsv = (hex: string) => {
         hsv.h = (r - g) / delta + 4;
         break;
     }
-    hsv.h = (hsv.h / 6) * 360;
-    hsv.s = hsv.s * 100;
-    hsv.v = hsv.v * 100;
   }
+  hsv.h = Math.round((hsv.h / 6) * 360);
+  hsv.s = Math.round(hsv.s * 100);
+  hsv.v = Math.round(hsv.v * 100);
 
   return hsv;
 };
