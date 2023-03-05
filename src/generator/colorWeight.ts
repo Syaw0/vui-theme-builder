@@ -35,6 +35,10 @@ const colorWeight = {
   lightA20: 0.64,
   lightA40: 0.49,
   lightA70: 0.44,
+
+  lightH: 0,
+  lightS: 0,
+  lightL: 100,
 };
 
 export default colorWeight;
