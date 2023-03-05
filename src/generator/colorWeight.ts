@@ -2,7 +2,7 @@ const colorWeight = {
   hueA10: 1,
   hueA20: 1,
   hueA40: 1,
-  hueA70: 10.1,
+  hueA70: 1.01,
 
   sat5: 0.91,
   sat10: 0.98,

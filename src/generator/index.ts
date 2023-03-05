@@ -44,7 +44,20 @@ const generator = (hsl: Hsl, contrastThreshold: number = 0.5, name: string) => {
     colors[name + key] = color;
     colors["on" + name + key] = contrastColor;
   });
+  aWeights.forEach((w) => {
+    const key = w as typeof aWeights[number];
+    const hue = h*colorWeight[`hueA${key}`];
+    let saturation =colorWeight[`satA${key}`] *100;
+    let lightness = colorWeight[`lightA${key}`] * 100
+   
+    const rgb = hslToRgb({h:hue,s:saturation,l:lightness})
+    const color = `hsl(${hue},${saturation},${lightness})`;
+    let contrastLight:number=((rgb.r*0.299)+(rgb.g*0.587 )+ (rgb.b*0.114))>150 ? 0:100
 
+    const contrastColor = `hsl(0,0%,${contrastLight}%)`;
+    colors["A"+name + key] = color;
+    colors["onA" + name + key] = contrastColor;
+  });
   return colors;
 };
 
