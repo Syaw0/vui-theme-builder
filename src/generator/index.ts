@@ -1,5 +1,5 @@
 import converter from "../converter";
-import generateDarkTheme from "./generateLightDarkTheme";
+import generateDarkTheme from "./generateDarkTheme";
 import generateLightTheme from "./generateLightTheme";
 import generateNeutralColors from "./generateNeutralColors";
 import generateRefColors from "./generateRefColors";

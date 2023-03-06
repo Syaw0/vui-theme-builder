@@ -12,5 +12,3 @@ const cmykToRgb = (cmyk: Cmyk) => {
 };
 
 export default cmykToRgb;
-
-console.log(cmykToRgb({ c: 70, m: 0, y: 51, k: 34 }));
