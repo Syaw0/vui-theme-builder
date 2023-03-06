@@ -3,7 +3,7 @@ import colorWeight from "./colorWeight";
 
 type Hsl = { h: number; s: number; l: number };
 
-const weights = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90] as const;
+const weights = [0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100] as const;
 const aWeights = [10, 20, 40, 70] as const;
 
 const generateRefColors = (
@@ -18,7 +18,10 @@ const generateRefColors = (
     const hue = h;
     let saturation;
     let lightness;
-    if (key === 50) {
+    if (key == 100 || key == 0) {
+      saturation = 0;
+      lightness = key / 100;
+    } else if (key === 50) {
       saturation = s * 0.01;
       lightness = l * 0.01;
     } else if (key < 50) {

@@ -1,5 +1,5 @@
-import { writeFile } from "fs";
 import converter from "../converter";
+import generateLightTheme from "./generateLightTheme";
 import generateNeutralColors from "./generateNeutralColors";
 import generateRefColors from "./generateRefColors";
 
@@ -12,7 +12,15 @@ const generatorTheme = (color: string) => {
   const tertiary = generateRefColors(terColor, 0.5, "tertiary");
 
   const neutralColors = generateNeutralColors(hsl);
-
+  console.log(
+    generateLightTheme({
+      primary,
+      secondary,
+      tertiary,
+      neutral: neutralColors.neutral,
+      neutralVariant: neutralColors.neutralVariant,
+    })
+  );
   return {
     primaryRef: primary,
     secondaryRef: secondary,
@@ -22,3 +30,4 @@ const generatorTheme = (color: string) => {
 };
 
 export default generatorTheme;
+generatorTheme("#b3baab");
