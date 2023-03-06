@@ -1,4 +1,5 @@
 import converter from "../converter";
+import generateDarkTheme from "./generateLightDarkTheme";
 import generateLightTheme from "./generateLightTheme";
 import generateNeutralColors from "./generateNeutralColors";
 import generateRefColors from "./generateRefColors";
@@ -12,22 +13,23 @@ const generatorTheme = (color: string) => {
   const tertiary = generateRefColors(terColor, 0.5, "tertiary");
 
   const neutralColors = generateNeutralColors(hsl);
-  console.log(
-    generateLightTheme({
-      primary,
-      secondary,
-      tertiary,
-      neutral: neutralColors.neutral,
-      neutralVariant: neutralColors.neutralVariant,
-    })
-  );
+  const colorRef = {
+    primary,
+    secondary,
+    tertiary,
+    neutral: neutralColors.neutral,
+    neutralVariant: neutralColors.neutralVariant,
+  };
+  const lightTheme = generateLightTheme(colorRef);
+  const darkTheme = generateDarkTheme(colorRef);
   return {
     primaryRef: primary,
     secondaryRef: secondary,
     tertiaryRef: tertiary,
     ...neutralColors,
+    light: lightTheme,
+    darkTheme: darkTheme,
   };
 };
 
 export default generatorTheme;
-generatorTheme("#b3baab");
