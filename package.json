@@ -1,0 +1,39 @@
+{
+  "name": "vui-theme-builder",
+  "version": "1.0.0",
+  "description": "simple interface to create a theme base on one color.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "ts-node ./scripts/build.ts",
+    "publish": "rm -rf ./dist && npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@syaw0.github.com:Syaw0/vui-theme-builder.git"
+  },
+  "files": [
+    "/dist"
+  ],
+  "keywords": [],
+  "author": {
+    "name": "syaw0",
+    "email": "siamhb7@protonmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^18.14.3",
+    "rollup": "^3.18.0",
+    "rollup-plugin-dts": "^5.2.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0"
+  },
+  "dependencies": {
+    "dye-converter": "^1.0.0"
+  }
+}
