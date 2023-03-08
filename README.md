@@ -18,7 +18,7 @@ npm install vui-theme-builder
 
 ```javascript
 
-import vuiThemeGenerator from "vui-theme-builder''
+import vuiThemeGenerator from "vui-theme-builder"
 // or
 const vuiThemeGenerator = require("vui-theme-builder")
 
