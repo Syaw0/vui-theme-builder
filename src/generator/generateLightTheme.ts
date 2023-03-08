@@ -1,17 +1,17 @@
 const generateLightTheme = (colorRef: any) => {
   return {
     primary: colorRef.primary.primary40,
-    onPrimary: colorRef.primary.primary100,
+    onPrimary: colorRef.primary.primary0,
     primaryContainer: colorRef.primary.primary90,
     onPrimaryContainer: colorRef.primary.primary10,
 
     secondary: colorRef.secondary.secondary40,
-    onSecondary: colorRef.secondary.secondary100,
+    onSecondary: colorRef.secondary.secondary0,
     secondaryContainer: colorRef.secondary.secondary90,
     onSecondaryContainer: colorRef.secondary.secondary10,
 
     tertiary: colorRef.tertiary.tertiary40,
-    onTertiary: colorRef.tertiary.tertiary100,
+    onTertiary: colorRef.tertiary.tertiary0,
     tertiaryContainer: colorRef.tertiary.tertiary90,
     onTertiaryContainer: colorRef.tertiary.tertiary10,
 

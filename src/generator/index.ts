@@ -28,7 +28,7 @@ const generatorTheme = (color: string) => {
     tertiaryRef: tertiary,
     ...neutralColors,
     light: lightTheme,
-    darkTheme: darkTheme,
+    dark: darkTheme,
   };
 };
 

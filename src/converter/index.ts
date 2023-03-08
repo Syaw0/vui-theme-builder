@@ -1,7 +1,7 @@
-import { cmykToHsl, rgbToHsl } from "dye-converter";
-import { hexToHsl } from "dye-converter";
+import { cmykToHsl, rgbToHsl, hexToHsl } from "dye-converter";
 
 const hexRegex = /^#[a-f\d]{3}$|^#[a-f\d]{6}$/i;
+
 const cmykRegex =
   /^cmyk\(\s*([\d]+)%*\s*,\s*([\d]+)%*\s*,\s*([\d]+)%*\s*,\s*([\d]+)%*\s*\)$/i;
 

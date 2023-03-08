@@ -3,10 +3,10 @@
     "moduleResolution": "node",
     "removeComments": false,
     "sourceMap": true,
-    "target": "es2018",
+    "target": "ESNext",
     "declaration": true,
     "strict": true,
-    "module": "CommonJS",
+    "module": "ESNext",
     "noEmitOnError": true,
     "lib": ["es2017"],
     "esModuleInterop": false

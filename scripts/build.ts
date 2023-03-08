@@ -5,9 +5,6 @@ const resolve = require("@rollup/plugin-node-resolve").default;
 const babel = require("@rollup/plugin-babel").default;
 const typescript = require("@rollup/plugin-typescript");
 
-// import rollup from 'rollup'
-// import
-
 const cwd = process.cwd();
 const inputPath = path.join(cwd + "/src/index.ts");
 const inputOpt = {
@@ -22,7 +19,7 @@ const inputOpt = {
     }),
     resolve(),
     babel({
-      presets: ["@babel/preset-env", "@babel/preset-react"],
+      presets: ["@babel/preset-env"],
       babelHelpers: "bundled",
     }),
   ],

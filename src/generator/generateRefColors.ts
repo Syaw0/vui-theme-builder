@@ -1,4 +1,4 @@
-import hslToRgb from "../converter/hslToRgb";
+import { hslToRgb } from "dye-converter";
 import colorWeight from "./colorWeight";
 
 type Hsl = { h: number; s: number; l: number };
@@ -20,7 +20,7 @@ const generateRefColors = (
     let lightness;
     if (key == 100 || key == 0) {
       saturation = 0;
-      lightness = key / 100;
+      lightness = key === 0 ? 100 : 0;
     } else if (key === 50) {
       saturation = s * 0.01;
       lightness = l * 0.01;
